@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
+
 import { ImInstagram } from 'react-icons/im';
-import Like from '../Tools/Like';
+import Like from '../Parts/Like';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
         return (
-            <nav className='flex items-center justify-center gap-x-[350px] py-5 shadow'>
-                <div className='size-[35px]'><ImInstagram className='size-full'/></div>
+            <nav className='w-full flex items-center justify-center gap-x-[350px] py-7 shadow-xl fixed top-0'>
+                <div className='size-[35px]'><ImInstagram className='size-full' /></div>
 
                 <section>
                     <ul className='size-full flex items-center gap-30'>
-                        <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'><a href="#">Tic</a></li>
-                        <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'><a href="#">Toc</a></li>
-                        <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'><a href="#">Tac</a></li>
-                        <Like/>
+                        <Link to="/">
+                            <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>To </li>
+                        </Link>
+                        <Link to="houses">
+                            <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>Toc</li>
+                        </Link>
+                        <Link to="">
+                            <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>Tac</li>
+                        </Link>
+
+                        <Like />
                     </ul>
                 </section>
 
