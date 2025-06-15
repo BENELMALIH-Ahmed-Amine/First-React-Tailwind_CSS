@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../nav/Navbar';
 
 const Product = () => {
     const houses = [
@@ -19,6 +18,7 @@ const Product = () => {
             space: 65 + 'm²',
             rooms: 2,
             price: "250.000 MAD",
+            promo: "15%"
         },
         {
             id: 3,
@@ -67,6 +67,8 @@ const Product = () => {
             space: 65 + 'm²',
             rooms: 2,
             price: "250.000 MAD",
+            promo: "15%"
+
         },
         {
             id: 9,
@@ -75,6 +77,7 @@ const Product = () => {
             space: 65 + 'm²',
             rooms: 2,
             price: "250.000 MAD",
+
         },
         {
             id: 10,
@@ -83,6 +86,7 @@ const Product = () => {
             space: 65 + 'm²',
             rooms: 2,
             price: "250.000 MAD",
+            promo: "20%"
         },
         {
             id: 11,
@@ -107,6 +111,7 @@ const Product = () => {
             space: 85 + 'm²',
             rooms: 3,
             price: "320.000 MAD",
+            promo: "25%"
         },
         {
             id: 14,
@@ -128,9 +133,8 @@ const Product = () => {
 
     return (
         <>
-            <Navbar />
             {
-                houses.map((h) => (                    
+                houses.map((h) => (
                     <article key={h.id} className="bg-[#936835] w-[385px] flex flex-col border-10 border-[#50341f]">
                         <section className='w-[100%] h-63 bg-[#50341f] rounded-b-[-40px]'><img className="w-full h-[97%] rounded-2xl" src="https://pix10.agoda.net/hotelImages/321/3215007/3215007_17110818200058949430.jpg?ca=6&ce=1&s=1024x768" alt="an image of the house" /></section>
 
@@ -143,7 +147,7 @@ const Product = () => {
                                 <p>Space: {h.space}</p>
 
                                 <Link to={`${h.id}`}>
-                                    <button className='bg-[#936835] w-auto border-2 border-black mt-5 ml-2 py-1 text-[#f1dfb7]' type='submit'>Details</button>
+                                    <button className='bg-[#936835] w-auto border-2 border-black mt-5 ml-2 py-1 px-4 text-[#f1dfb7] hover:bg-[#a27845] hover:text-[#f2e6cb]' type='submit'>Details</button>
                                 </Link>
                             </div>
 

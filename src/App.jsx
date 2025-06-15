@@ -10,11 +10,10 @@ function App() {
 
   return (
     <>
-      {/* <Products_Info /> */}
       <Routes>
         <Route path="/" element={<Todo_list />} />
-        <Route path="houses" element={<Products />} />
-        <Route path="houses/:id" element={<Products_Info />} />
+        <Route path="/houses/" element={<Products />} />
+        <Route path="/houses/:id" element={<Products_Info />} />
       </Routes>
     </>
   )

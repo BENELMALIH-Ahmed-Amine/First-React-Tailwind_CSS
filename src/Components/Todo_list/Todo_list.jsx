@@ -1,5 +1,5 @@
 import React, { Component, useEffect } from 'react';
-import Navbar from '../nav/Navbar';
+// import Navbar from '../nav/Navbar';
 
 class Todo_list extends Component {
     render() {
@@ -14,7 +14,7 @@ class Todo_list extends Component {
 
         return (
             <>
-                <Navbar />
+                {/* <Navbar /> */}
                 <article className="flex flex-col items-center gap-10 bg-black h-[100vh] mt-[105px]">
                     <section className="flex flex-col items-center gap-3 mt-15">
                         <h1 className='text-5xl font-black text-white'>To Do List</h1>
