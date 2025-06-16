@@ -18,8 +18,8 @@ class Navbar extends Component {
                         <Link to="/houses/">
                             <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>Products</li>
                         </Link>
-                        <Link to="">
-                            <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>Tac</li>
+                        <Link to="/Movies/">
+                            <li className='bg-blue-400 text-xl px-4 py-0.5 hover:bg-blue-300'>Movies</li>
                         </Link>
 
                         <Like />

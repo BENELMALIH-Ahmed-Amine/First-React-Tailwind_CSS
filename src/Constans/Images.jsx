@@ -1,0 +1,17 @@
+import dar1 from '.././assets/images/houses/image1.png'
+import dar2 from '.././assets/images/houses/image2.png'
+import dar3 from '.././assets/images/houses/image3.png'
+import dar4 from '.././assets/images/houses/image4.png'
+import dar5 from '.././assets/images/houses/image5.png'
+import dar6 from '.././assets/images/houses/image6.png'
+import dar7 from '.././assets/images/houses/image7.png'
+import dar8 from '.././assets/images/houses/image8.png'
+import dar9 from '.././assets/images/houses/image9.png'
+import dar10 from '.././assets/images/houses/image10.png'
+import dar11 from '.././assets/images/houses/image11.png'
+import dar12 from '.././assets/images/houses/image12.png'
+import dar13 from '.././assets/images/houses/image13.png'
+import dar14 from '.././assets/images/houses/image14.png'
+import dar15 from '.././assets/images/houses/image15.png'
+
+export default { dar1, dar2, dar3, dar4, dar5, dar6, dar7, dar8, dar9, dar10, dar11, dar12, dar13, dar14, dar15 };

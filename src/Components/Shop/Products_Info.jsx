@@ -1,155 +1,29 @@
 import React from 'react';
-import { FaChevronDown } from 'react-icons/fa';
-import Navbar from '../nav/Navbar';
 import { useParams } from 'react-router-dom';
-import { BiArrowBack } from 'react-icons/bi';
+import Navbar from '../nav/Navbar';
+import { Houses_D } from './Houses_D';
 import { Link } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Products_Info = () => {
     const { id } = useParams()
 
-    const houses = [
-        {
-            id: 1,
-            img: "../../assets/images/houses/image copy 1.png",
-            flor: "R",
-            space: 180 + 'm²',
-            rooms: 4,
-            price: "700.000 MAD",
-        },
-        {
-            id: 2,
-            img: "../../assets/images/houses/image copy 2.png",
-            flor: "1",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-            promo: "15%"
-        },
-        {
-            id: 3,
-            img: "../../assets/images/houses/image copy 3.png",
-            flor: "1",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 4,
-            img: "../../assets/images/houses/image copy 4.png",
-            flor: "1",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 5,
-            img: "../../assets/images/houses/image copy 5.png",
-            flor: "1",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 6,
-            img: "../../assets/images/houses/image copy 6.png",
-            flor: "2",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 7,
-            img: "../../assets/images/houses/image copy 7.png",
-            flor: "2",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 8,
-            img: "../../assets/images/houses/image copy 8.png",
-            flor: "2",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-            promo: "15%"
+const houses = Houses_D
 
-        },
-        {
-            id: 9,
-            img: "../../assets/images/houses/image copy 9.png",
-            flor: "2",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-
-        },
-        {
-            id: 10,
-            img: "../../assets/images/houses/image copy 10.png",
-            flor: "3",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-            promo: "20%"
-        },
-        {
-            id: 11,
-            img: "../../assets/images/houses/image copy 11.png",
-            flor: "3",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 12,
-            img: "../../assets/images/houses/image copy 12.png",
-            flor: "3",
-            space: 65 + 'm²',
-            rooms: 2,
-            price: "250.000 MAD",
-        },
-        {
-            id: 13,
-            img: "../../assets/images/houses/image copy 13.png",
-            flor: "4",
-            space: 85 + 'm²',
-            rooms: 3,
-            price: "320.000 MAD",
-            promo: "25%"
-        },
-        {
-            id: 14,
-            img: "../../assets/images/houses/image copy 14.png",
-            flor: "4",
-            space: 85 + 'm²',
-            rooms: 3,
-            price: "320.000 MAD",
-        },
-        {
-            id: 15,
-            img: "../../assets/images/houses/image copy 15.png",
-            flor: "4",
-            space: 85 + 'm²',
-            rooms: 3,
-            price: "320.000 MAD",
-        }
-    ]
-
-    const e = houses.find(h => h.id == id)
+    const house = houses.find(h => h.id == id)
 
     return (
         <main>
             <Navbar />
-            <section className='bg-[url(https://pix10.agoda.net/hotelImages/321/3215007/3215007_17110818200058949430.jpg?ca=6&ce=1&s=1024x768)] bg-no-repeat bg-cover mt-26 flex flex-col justify-center items-center'>
+            <section style={{ backgroundImage: `url(${house.img})` }} className='bg-no-repeat bg-cover mt-26 flex flex-col justify-center items-center'>
 
                 <Link to="/houses">
                     <div className='flex items-center gap-2 rounded-[50px] bg-[#936835] px-4 pr-5.5 py-2.5 text-[#f1dfb7] font-bold absolute left-5 z-2'><BiArrowBack className='size-6' />Back to Products</div>
                 </Link>
 
                 <div className='w-[850px] flex flex-col justify-center items-center pt-[450px] pb-[170px] gap-5 mt-26'>
-                    <p className='text-white text-xl font-bold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti dolorum alias reprehenderit necessitatibus mollitia porro inventore nam, numquam nesciunt eum, blanditiis facilis autem dolor dolore? A quaerat enim ad. {e.id}</p>
+                    <p className='text-white text-xl font-bold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti dolorum alias reprehenderit necessitatibus mollitia porro inventore nam, numquam nesciunt eum, blanditiis facilis autem dolor dolore? A quaerat enim ad. {house.id}</p>
 
                     <div className='flex justify-center gap-2'>
                         <button className='flex items-center gap-2 bg-[#50341f] text-[#f1dfb7] font-bold py-2 px-9.5' type="button">Buy Now</button>
@@ -177,7 +51,7 @@ const Products_Info = () => {
                                     <div className='w-[45px] h-[110px] bg-red-700 clip-path border-3 border-t-0 border-black absolute top-[-14px] right-4.5 flex justify-center text-lg text-white font-bold'>
                                         <p className='mt-7.5'>{h.promo}</p>
                                     </div>
-                                    <section className='w-[100%] h-63 bg-[#50341f] rounded-b-[-40px]'><img className="w-full h-[97%] rounded-2xl" src="https://pix10.agoda.net/hotelImages/321/3215007/3215007_17110818200058949430.jpg?ca=6&ce=1&s=1024x768" alt="an image of the house" /></section>
+                                    <section className='w-[100%] h-63 bg-[#50341f] rounded-b-[-40px]'><img className="w-full h-[97%] rounded-2xl" src={h.img} alt="an image of the house" /></section>
 
                                     <section className='w-[100%] pt-2.5 pb-2.5 pl-3 flex text-xl text-[#6b5132] font-bold'>
                                         <div className="w-40 bg-[#f1dfb7] flex flex-col p-2 py-3 pl-3.5">
